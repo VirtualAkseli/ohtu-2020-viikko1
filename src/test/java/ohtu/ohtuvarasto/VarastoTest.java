@@ -65,4 +65,21 @@ public class VarastoTest {
         assertEquals(4, varasto.paljonkoMahtuu(), vertailuTarkkuus);
     }
 
+    @Test
+    public void ottaminenEiMeneYli() {
+        
+        varasto.lisaaVarastoon(4);
+        
+        varasto.otaVarastosta(11);
+
+        // varastossa pitäisi olla tilaa 10 - 4 + 6 eli 10 (ylimenoa ei sallittu)
+        assertEquals(10, varasto.paljonkoMahtuu(), vertailuTarkkuus);
+    }
+
+    @Test
+    public void eiVoiLisätäLiikaa() {
+        varasto.lisaaVarastoon(20);
+        assertEquals(0, varasto.paljonkoMahtuu(), vertailuTarkkuus);
+    }
+
 }
