@@ -20,7 +20,7 @@ public class VarastoTest {
 
     @Before
     public void setUp() {
-        //varasto = new Varasto(10);
+        varasto = new Varasto(10);
         huonoVarasto = new Varasto(0.0);
         mahdotonVarasto = new Varasto(2, -2);
         kunnonVarasto = new Varasto(2, 2);
