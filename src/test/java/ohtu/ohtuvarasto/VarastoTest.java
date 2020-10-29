@@ -17,6 +17,7 @@ public class VarastoTest {
     Varasto mahdotonVarasto;
     Varasto kunnonVarasto;
     double vertailuTarkkuus = 0.0001;
+    Varasto muutosVarasto2011;
 
     @Before
     public void setUp() {
